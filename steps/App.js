@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, React, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, React, TouchableOpacity, Image } from 'react-native';
 
 export default function App() {
   return (
@@ -8,14 +8,14 @@ export default function App() {
       <View style={styles.buttonplacement}>
         <View style={styles.buttoncontainer}>
           <TouchableOpacity onPress={() =>
-            console.log("Button 1")
-          }>
-            <Text style={styles.buttons}>Button 1</Text>
+            console.log("Chef Button")
+          } style={styles.chefbutton}>
+            <Image style={styles.chef} source={require('./assets/chef.jpg')}/>
           </TouchableOpacity>
           <TouchableOpacity onPress={() =>
-            console.log("Button 2")
-          }>
-            <Text style={styles.buttons}>Button 2</Text>
+            console.log("Home Button")
+          } style={styles.homebutton}>
+            <Image style={styles.home} source={require('./assets/home.jpg')}/>
           </TouchableOpacity>
           <TouchableOpacity onPress={() =>
             console.log("Button 3")
@@ -54,8 +54,27 @@ const styles = StyleSheet.create({
     paddingLeft: 37,
     paddingRight: 37,
   },
+  chefbutton: {
+    paddingLeft: 20,
+    paddingRight: 20,
+  },
+  chef: {
+    aspectRatio: 1.5,
+    height: 70,
+    width: 100,
+    resizeMode: 'contain',
+  },
   foodPic: {
     justifyContent: 'center',
-    
-  }
+  },
+  homebutton: {
+    paddingLeft: 20,
+    paddingRight: 20,
+  },
+  home: {
+    aspectRatio: 1.5,
+    height: 50,
+    width: 100,
+    resizeMode: 'contain',
+  },
 });

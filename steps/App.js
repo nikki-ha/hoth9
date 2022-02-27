@@ -1,72 +1,22 @@
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, React, TouchableOpacity, Image } from 'react-native';
 
+import ActivityScreen from './screens/activity';
+import HomeScreen from './screens/home';
+import RecipeScreen from './screens/recipes';
+
+const Stack = createNativeStackNavigator();
+
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>progress bar will go here</Text>
-      <View>
-        <TouchableOpacity onPress={() =>
-          console.log("Pause/Play")
-        } style={styles.startbutton}>
-          <Text style={styles.start}>start button</Text>  
-        </TouchableOpacity>
-        <Text>Tap to begin workout!</Text>
-      </View>
-      <View style={styles.buttonplacement}>
-        <View style={styles.buttoncontainer}>
-          <TouchableOpacity onPress={() =>
-            console.log("Chef Button")
-          } style={styles.imagebutton}>
-            <Image style={styles.image} source={require('./assets/chef.png')}/>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() =>
-            console.log("Home Button")
-          } style={styles.imagebutton}>
-            <Image style={styles.image} source={require('./assets/home.png')}/>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() =>
-            console.log("Menu Button")
-          } style={styles.imagebutton}>
-            <Image style={styles.image} source={require('./assets/menu.png')}/>
-          </TouchableOpacity>
-        </View>
-      </View>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName = "Home" screenOptions={{headerShown: false}}>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Activity" component={ActivityScreen} />
+        <Stack.Screen name="Recipes" component={RecipeScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { //overarching container
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-    marginTop: 45,
-  },
-  startbutton: { //places start button roughly in middle of page
-    backgroundColor: '#fff',
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-    height: 450,
-  },
-  buttoncontainer: { //makes buttons go in a row not column
-    display: 'flex',
-    flexDirection: 'row',
-  },
-  buttonplacement: { //gap so buttons are at bottom
-    backgroundColor: '#fff',
-    justifyContent: 'flex-end',
-    height: 150,
-    padding: 20,
-  },
-  imagebutton: { //spaces buttons
-    paddingLeft: 20,
-    paddingRight: 20,
-  },
-  image: { //sizes the icons
-    aspectRatio: 1.5,
-    height: 70,
-    resizeMode: 'contain',
-  },
-});

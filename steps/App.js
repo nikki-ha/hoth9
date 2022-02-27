@@ -9,18 +9,18 @@ export default function App() {
         <View style={styles.buttoncontainer}>
           <TouchableOpacity onPress={() =>
             console.log("Chef Button")
-          } style={styles.chefbutton}>
-            <Image style={styles.chef} source={require('./assets/chef.jpg')}/>
+          } style={styles.imagebutton}>
+            <Image style={styles.image} source={require('./assets/chef.png')}/>
           </TouchableOpacity>
           <TouchableOpacity onPress={() =>
             console.log("Home Button")
-          } style={styles.homebutton}>
-            <Image style={styles.home} source={require('./assets/home.jpg')}/>
+          } style={styles.imagebutton}>
+            <Image style={styles.image} source={require('./assets/home.png')}/>
           </TouchableOpacity>
           <TouchableOpacity onPress={() =>
-            console.log("Button 3")
-          }>
-            <Text style={styles.buttons}>Button 3</Text>
+            console.log("Menu Button")
+          } style={styles.imagebutton}>
+            <Image style={styles.image} source={require('./assets/menu.png')}/>
           </TouchableOpacity>
         </View>
       </View>
@@ -54,11 +54,11 @@ const styles = StyleSheet.create({
     paddingLeft: 37,
     paddingRight: 37,
   },
-  chefbutton: {
+  imagebutton: {
     paddingLeft: 20,
     paddingRight: 20,
   },
-  chef: {
+  image: {
     aspectRatio: 1.5,
     height: 70,
     width: 100,
@@ -66,15 +66,5 @@ const styles = StyleSheet.create({
   },
   foodPic: {
     justifyContent: 'center',
-  },
-  homebutton: {
-    paddingLeft: 20,
-    paddingRight: 20,
-  },
-  home: {
-    aspectRatio: 1.5,
-    height: 50,
-    width: 100,
-    resizeMode: 'contain',
   },
 });

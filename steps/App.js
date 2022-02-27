@@ -11,6 +11,7 @@ export default function App() {
         } style={styles.startbutton}>
           <Text style={styles.start}>start button</Text>  
         </TouchableOpacity>
+        <Text>Tap to begin workout!</Text>
       </View>
       <View style={styles.buttonplacement}>
         <View style={styles.buttoncontainer}>
@@ -43,19 +44,20 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     marginTop: 45,
   },
-  startbutton: {
+  startbutton: { //places start button roughly in middle of page
     backgroundColor: '#fff',
     justifyContent: 'flex-end',
-    height: 275,
+    alignItems: 'center',
+    height: 450,
   },
-  buttoncontainer: { //makes buttons go in row not column
+  buttoncontainer: { //makes buttons go in a row not column
     display: 'flex',
     flexDirection: 'row',
   },
   buttonplacement: { //gap so buttons are at bottom
     backgroundColor: '#fff',
     justifyContent: 'flex-end',
-    height: 350,
+    height: 150,
     padding: 20,
   },
   imagebutton: { //spaces buttons

@@ -3,13 +3,11 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     container: { //overarching container
       flex: 1,
-      backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'flex-start',
       marginTop: 45,
     },
     startbutton: { //places start button roughly in middle of page
-      backgroundColor: '#fff',
       justifyContent: 'flex-end',
       alignItems: 'center',
       height: 450,
@@ -21,8 +19,8 @@ export const styles = StyleSheet.create({
     buttonplacement: { //gap so buttons are at bottom
       backgroundColor: '#fff',
       justifyContent: 'flex-end',
-      height: 150,
-      padding: 20,
+      position: 'absolute',
+      bottom: 0
     },
     imagebutton: { //spaces buttons
       paddingLeft: 20,
@@ -33,4 +31,12 @@ export const styles = StyleSheet.create({
       height: 70,
       resizeMode: 'contain',
     },
+    background: { // background images
+        flex: 1,
+        justifyContent: "center"
+    },
+    title:{
+      fontWeight: 'bold',
+      fontSize: 40
+    }
   });

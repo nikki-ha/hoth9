@@ -1,11 +1,12 @@
-import { StyleSheet, Text, View, React, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, Text, View, React, TouchableOpacity, Image, ImageBackground} from 'react-native';
 import { styles } from '../styles/global';
-
 
 export default function HomeScreen({navigation}){
     return (
         <View style={styles.container}>
-      <Text>progress bar will go here</Text>
+            {/* <ImageBackground source={require('../assets/blankBackground.png')} style={styles.background}> */}
+
+      <Text style={styles.title}>WALK WOK</Text>
       <View>
         <TouchableOpacity onPress={() =>
           console.log("Pause/Play")
@@ -33,6 +34,8 @@ export default function HomeScreen({navigation}){
           </TouchableOpacity>
         </View>
       </View>
+
+      {/* </ImageBackground> */}
     </View>
     );
 }

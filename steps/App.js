@@ -5,6 +5,13 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>progress bar will go here</Text>
+      <View style={styles.startplacement}>
+        <TouchableOpacity onPress={() =>
+          console.log("Pause/Play")
+        } style={styles.startbutton}>
+          <Text style={styles.start}>start button</Text>  
+        </TouchableOpacity>
+      </View>
       <View style={styles.buttonplacement}>
         <View style={styles.buttoncontainer}>
           <TouchableOpacity onPress={() =>
@@ -24,47 +31,44 @@ export default function App() {
           </TouchableOpacity>
         </View>
       </View>
-
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  container: { //overarching container
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'flex-start',
     marginTop: 45,
   },
-  buttoncontainer: {
+  startbutton: {
+    backgroundColor: '#fff',
+    justifyContent: 'flex-end',
+    height: 275,
+  },
+  startplacement: {
+    paddingLeft: 10,
+    paddingRight: 10,
+  },
+  buttoncontainer: { //makes buttons go in row not column
     display: 'flex',
     flexDirection: 'row',
   },
-  buttonplacement: {
+  buttonplacement: { //gap so buttons are at bottom
     backgroundColor: '#fff',
     justifyContent: 'flex-end',
-    height: 625,
+    height: 350,
     padding: 20,
   },
-  buttons: {
-    borderColor: 'black',
-    borderWidth: 1,
-    padding: 20,
-    paddingLeft: 37,
-    paddingRight: 37,
-  },
-  imagebutton: {
+  imagebutton: { //spaces buttons
     paddingLeft: 20,
     paddingRight: 20,
   },
-  image: {
+  image: { //sizes the icons
     aspectRatio: 1.5,
     height: 70,
-    width: 100,
     resizeMode: 'contain',
-  },
-  foodPic: {
-    justifyContent: 'center',
   },
 });

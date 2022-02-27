@@ -1,7 +1,8 @@
 import { StyleSheet, Text, View, React, TouchableOpacity, Image } from 'react-native';
 import { styles } from '../styles/global';
 
-export default function HomeScreen(){
+
+export default function HomeScreen({navigation}){
     return (
         <View style={styles.container}>
       <Text>progress bar will go here</Text>
@@ -16,17 +17,17 @@ export default function HomeScreen(){
       <View style={styles.buttonplacement}>
         <View style={styles.buttoncontainer}>
           <TouchableOpacity onPress={() =>
-            console.log("Chef Button")
+            navigation.navigate('Recipes')
           } style={styles.imagebutton}>
             <Image style={styles.image} source={require('../assets/chef.png')}/>
           </TouchableOpacity>
           <TouchableOpacity onPress={() =>
-            console.log("Home Button")
+            navigation.navigate('Home')
           } style={styles.imagebutton}>
             <Image style={styles.image} source={require('../assets/home.png')}/>
           </TouchableOpacity>
           <TouchableOpacity onPress={() =>
-            console.log("Menu Button")
+            navigation.navigate('Activity')
           } style={styles.imagebutton}>
             <Image style={styles.image} source={require('../assets/menu.png')}/>
           </TouchableOpacity>

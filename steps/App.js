@@ -5,7 +5,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>progress bar will go here</Text>
-      <View style={styles.startplacement}>
+      <View>
         <TouchableOpacity onPress={() =>
           console.log("Pause/Play")
         } style={styles.startbutton}>
@@ -47,10 +47,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     justifyContent: 'flex-end',
     height: 275,
-  },
-  startplacement: {
-    paddingLeft: 10,
-    paddingRight: 10,
   },
   buttoncontainer: { //makes buttons go in row not column
     display: 'flex',

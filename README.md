@@ -1,11 +1,11 @@
 # HOTH9 2022
-## Walk Wok: A recipe a day keeps the doctor away!
+## WokWalk | Alyssa Tadeo, Camille Fenson, and Nikki Ha
 
 ## Inspiration
-We developed WalkWok with the intention of promoting healthy habits by making it fun for users to reach their step goals. While it's difficult to maintain an active lifestyle, users can feel motivated to walk more with the prospect of unlocking new recipes! To combine fun and health, our app drew inspiration from Pokemon Go, Flora, and Nike Run Club.
+We developed WokWalk with the intention of promoting healthy habits by making it fun for users to reach their step goals. While it's difficult to maintain an active lifestyle, users can feel motivated to walk more with the prospect of unlocking new recipes! To combine fun and health, our app drew inspiration from Pokemon Go, Flora, and Nike Run Club.
 
 ## What it Does
-We intended for WalkWok to track our users' steps which contributes towards personal progress to unlocking a new recipe. For now, we present a simple design of our home screen, recipe screen, and log screen. The home screen was intended to display a progress bar at the top, a navigation bar at the bottom, a graphic of possible recipes that can be earned, a timer, and a start/pause button. The recipe screen was intended to show the recipes the user unlocked and the recipes the user hasn't unlocked yet. Lastly, the log screen was intended to show a log of all the prior walks and routes the user took.
+We intended for WokWalk to track our users' steps which contributes towards personal progress to unlocking a new recipe. For now, we present a simple design of our home screen, recipe screen, and log screen. The home screen was intended to display a progress bar at the top, a navigation bar at the bottom, a graphic of possible recipes that can be earned, a timer, and a start/pause button. The recipe screen was intended to show the recipes the user unlocked and the recipes the user hasn't unlocked yet. Lastly, the log screen was intended to show a log of all the prior walks and routes the user took.
 
 ## How We Built It
 To build our project, we used React Native, JavaScript, CSS, Photoshop, the React navigation API, and GitHub.
